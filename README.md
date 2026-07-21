@@ -79,6 +79,7 @@
 
 ۵. یک پنجره پاپ‌آپ زرد رنگ باز می‌شود، اطلاعات را به شکل زیر وارد کنید:
 
+
 <div align="left" dir="ltr">
 
    * **Name:** نام تجاری یا نام شخصی خودتان (مثلاً: `John Doe`).
@@ -100,9 +101,12 @@
 * **Port:** `587`
 * **Username:** آدرس کامل جیمیل شخصی شما (`youraccount@gmail.com`)
 * **Password:** همان **رمز عبور ۱۶ حرفی اختصاصی** که در گام اول از گوگل دریافت کردید.
-* **نوع اتصال:** گزینه **Secured connection using TLS (recommended)** را انتخاب کنید.
 
 </div>
+
+* **نوع اتصال:** گزینه **Secured connection using TLS (recommended)** را انتخاب کنید.
+
+
 
 در نهایت روی دکمه **Add Account** کلیک کنید.
 
