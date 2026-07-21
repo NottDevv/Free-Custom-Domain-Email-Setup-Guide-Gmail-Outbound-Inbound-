@@ -80,7 +80,7 @@
 ۵. یک پنجره پاپ‌آپ زرد رنگ باز می‌شود، اطلاعات را به شکل زیر وارد کنید:
 
 
-<div align="right" dir="ltr">
+<div align="left" dir="ltr">
 
    * **Name:** نام تجاری یا نام شخصی خودتان (مثلاً: `John Doe`).
    * **Email address:** آدرس ایمیل کاری دامنه‌تان (مثلاً: `info@yourdomain.com`).
@@ -95,11 +95,14 @@
 ### گام ۳: وارد کردن مشخصات سرور خروجی (SMTP)
 اطلاعات سرور را دقیقاً بر اساس ساختار زیر پر کنید:
 
-<div align="right" dir="ltr">
+<div align="right" dir="rtl">
 
-* **SMTP Server:** `smtp.gmail.com` 
+* **SMTP Server:** `smtp.gmail.com`
+  
 * **Port:** `587`
+  
 * **Username:** آدرس کامل جیمیل شخصی شما (`youraccount@gmail.com`)
+  
 * **Password:** همان **رمز عبور ۱۶ حرفی اختصاصی** که در گام اول از گوگل دریافت کردید.
 
 </div>
