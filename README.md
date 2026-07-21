@@ -95,7 +95,7 @@
 ### گام ۳: وارد کردن مشخصات سرور خروجی (SMTP)
 اطلاعات سرور را دقیقاً بر اساس ساختار زیر پر کنید:
 
-<div align="right" dir="ltr">
+<div align="left" dir="rtl">
 
 ۱- **SMTP Server:** `smtp.gmail.com`
   
