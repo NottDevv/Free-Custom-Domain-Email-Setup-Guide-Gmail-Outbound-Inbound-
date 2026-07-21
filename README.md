@@ -80,7 +80,7 @@
 ۵. یک پنجره پاپ‌آپ زرد رنگ باز می‌شود، اطلاعات را به شکل زیر وارد کنید:
 
 
-<div align="left" dir="ltr">
+<div align="right" dir="ltr">
 
    * **Name:** نام تجاری یا نام شخصی خودتان (مثلاً: `John Doe`).
    * **Email address:** آدرس ایمیل کاری دامنه‌تان (مثلاً: `info@yourdomain.com`).
@@ -95,7 +95,7 @@
 ### گام ۳: وارد کردن مشخصات سرور خروجی (SMTP)
 اطلاعات سرور را دقیقاً بر اساس ساختار زیر پر کنید:
 
-<div align="left" dir="ltr">
+<div align="right" dir="ltr">
 
 * **SMTP Server:** `smtp.gmail.com` 
 * **Port:** `587`
@@ -106,9 +106,7 @@
 
 * **نوع اتصال:** گزینه **Secured connection using TLS (recommended)** را انتخاب کنید.
 
-
-
-در نهایت روی دکمه **Add Account** کلیک کنید.
+* در نهایت روی دکمه **Add Account** کلیک کنید.
 
 ### گام ۴: تایید نهایی و فعال‌سازی
 
