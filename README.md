@@ -1,92 +1,117 @@
 <div align="left" dir="ltr">
   <a href="README.md"><img src="https://img.shields.io/badge/English-007ec6?style=for-the-badge" alt="English"></a>
-  <a href="README-Fa.md"><img src="https://img.shields.io/badge/Persian-2ea44f?style=for-the-badge" alt="Persian"></a>
+  <a href="README-En.md"><img src="https://img.shields.io/badge/Persian-2ea44f?style=for-the-badge" alt="Persian"></a>
 </div>
 
-# 📧 Comprehensive Guide to Setting Up Free Custom Domain Email (Connected to Gmail)
+# 📧 راهنمای جامع راه‌اندازی ایمیل رایگان با دامنه اختصاصی (اتصال به جیمیل)
 
-This guide will walk you through setting up a professional email address with your custom domain (e.g., `info@yourdomain.com`) completely free of charge, allowing you to send and receive emails directly through your **personal free Gmail inbox**. 
-This method uses **ImprovMX** for receiving and forwarding emails, and **Google (Gmail SMTP)** servers for sending emails.
-
----
-
-## 🛠️ Prerequisites
-Before starting, make sure you have the following ready:
-
-1. A custom domain name (e.g., `yourdomain.com`).
-2. Access to your domain's DNS management panel (e.g., Cloudflare, Namecheap, or your hosting provider).
-3. A personal Gmail account (e.g., `youraccount@gmail.com`).
+این راهنما به شما آموزش می‌دهد که چگونه بدون پرداخت هزینه، یک ایمیل کاری و حرفه‌ای با دامنه اختصاصی خود (مانند `info@yourdomain.com`) بسازید و از طریق پنل **جیمیل رایگان شخصی خود**، اقدام به ارسال و دریافت ایمیل کنید. 
+در این روش از سرویس **ImprovMX** برای دریافت و فوروارد ایمیل‌ها و از سرورهای **گوگل (Gmail SMTP)** برای ارسال ایمیل استفاده می‌شود.
 
 ---
 
-## 📥 Part 1: Receiving Email Settings (Forwarding to Gmail via ImprovMX)
+## 🛠️ پیش‌نیازها
+قبل از شروع، مطمئن شوید موارد زیر را در اختیار دارید:
 
-ImprovMX acts as a mail router; it receives emails sent to your custom domain address and instantly forwards them to your personal Gmail account.
+۱. یک دامنه اختصاصی (مثلاً `yourdomain.com`).
 
-### Step 1: Sign Up on ImprovMX
+۲. دسترسی به پنل مدیریت DNS دامنه (مانند کلودفلر، ایرنیک، یا هاستینگ).
 
-1. Go to [ImprovMX.com](https://improvmx.com).
-2. Enter your domain name (`yourdomain.com`) and your personal Gmail address (`youraccount@gmail.com`).
-3. Click the **Create a free forward** button.
-4. Open your Gmail inbox and click the activation link sent by ImprovMX to verify your account.
+۳. یک حساب جیمیل شخصی (مثلاً `youraccount@gmail.com`).
 
-### Step 2: Configure DNS Records in Cloudflare or Domain Panel
-Log in to your domain's DNS management panel and add the following records to route your emails correctly:
+---
 
-| Record Type | Name / Host | Value | Priority | Purpose |
+## 📥 بخش اول: تنظیمات دریافت ایمیل (فوروارد به جیمیل از طریق ImprovMX)
+
+سرویس ImprovMX نقش یک مسیر‌یاب را بازی می‌کند؛ ایمیل‌های ارسالی به دامنه کاری شما را می‌گیرد و فوراً به جیمیل شخصی شما می‌فرستد.
+
+### گام ۱: ثبت‌نام در ImprovMX
+
+۱. وارد سایت [ImprovMX.com](https://improvmx.com) شوید.
+
+۲. نام دامنه خود (`yourdomain.com`) و آدرس جیمیل شخصی‌تان (`youraccount@gmail.com`) را وارد کنید.
+
+۳. روی دکمه **Create a free forward** کلیک کنید.
+
+۴. ایمیل خود را باز کرده و روی لینک فعال‌سازی ارسالی از طرف این سرویس کلیک کنید تا حساب شما تایید شود.
+
+### گام ۲: تنظیم رکوردهای DNS در کلودفلر یا پنل دامنه
+وارد پنل مدیریت DNS دامنه‌تان شوید و رکوردهای زیر را برای هدایت صحیح ایمیل‌ها اضافه کنید:
+
+| نوع رکورد (Type) | نام / هاست (Name) | مقدار (Value) | اولویت (Priority) | هدف |
 | :--- | :--- | :--- | :--- | :--- |
-| **MX** | `@` (or leave blank) | `mx1.improvmx.com.` | `10` | Primary inbound mail server |
-| **MX** | `@` (or leave blank) | `mx2.improvmx.com.` | `20` | Secondary inbound mail server |
-| **TXT** | `@` (or leave blank) | `v=spf1 include:spf.improvmx.com ~all` | — | Prevents emails from being marked as spam |
+| **MX** | `@` (یا خالی) | `mx1.improvmx.com.` | `10` | سرور دریافت اصلی |
+| **MX** | `@` (یا خالی) | `mx2.improvmx.com.` | `20` | سرور دریافت پشتیبان |
+| **TXT** | `@` (یا خالی) | `v=spf1 include:spf.improvmx.com ~all` | — | جلوگیری از اسپم شدن ایمیل‌ها |
 
-> ⏳ **Note:** DNS changes can take anywhere from a few minutes to a few hours to propagate. In the ImprovMX dashboard, click **Check MX settings** until the status turns green (**Email forwarding active**).
+> ⏳ **نکته:** اعمال تغییرات DNS ممکن است بین چند دقیقه تا چند ساعت طول بکشد. در پنل ImprovMX روی دکمه **Check MX settings** کلیک کنید تا وضعیت به رنگ سبز (**Email forwarding active**) درآید.
 
 ---
 
-## 📤 Part 2: Sending Email Settings (via Gmail SMTP Server)
+## 📤 بخش دوم: تنظیمات ارسال ایمیل (از طریق سرور SMTP جیمیل)
 
-Since the free tier of ImprovMX only forwards incoming emails, we use Google's outgoing SMTP servers so you can send emails using your custom domain identity.
+از آنجا که سرویس رایگان ImprovMX فقط ایمیل‌ها را دریافت می‌کند، ما از سرورهای خروجی گوگل استفاده می‌کنیم تا بتوانید با هویت دامنه خودتان ایمیل ارسال کنید.
 
-### Step 1: Generate a Google App Password
-Due to Google's security policies, you cannot use your standard Gmail password for SMTP connections; you must generate a dedicated App Password:
+### گام ۱: ساخت رمز عبور برنامه در گوگل (App Password)
+به دلیل قوانین امنیتی جدید گوگل، نمی‌توانید از رمز عبور اصلی جیمیل خود برای اتصال SMTP استفاده کنید و باید یک رمز عبور اختصاصی برای برنامه بسازید:
 
-1. Go to your [Google Account Management](https://myaccount.google.com) page.
-2. From the navigation menu, select the **Security** tab.
-3. Make sure **2-Step Verification** is turned **ON** for your account.
-4. In the search box at the top of the Security page, type **App passwords** and click on the result to go directly to the App Passwords creation page.
-5. Enter a custom name for the app (e.g., `Custom Domain SMTP`).
-6. Click **Create**. Copy and save the **16-character yellow password** displayed (ignore the spaces between letters).
+۱. به صفحه [مدیریت حساب گوگل (Google Account)](https://myaccount.google.com) خود بروید.
 
-### Step 2: Connect Domain to Gmail Inbox
+۲. از منوی سمت چپ/راست وارد تب **Security** (امنیت) شوید.
 
-1. Log in to your personal Gmail account.
-2. Click the gear icon (Settings) in the top-right corner and select **See all settings**.
-3. Go to the **Accounts and Import** tab.
-4. In the **Send mail as** section, click **Add another email address**.
-5. A yellow pop-up window will appear; fill in the details as follows:
-   * **Name:** Your name or business name (e.g., `John Doe`).
-   * **Email address:** Your custom domain email address (e.g., `info@yourdomain.com`).
-   * ⚠️ **CRITICAL:** Make sure to **UNCHECK** the **Treat as an alias** option.
-   * Click the **Next Step** button.
+۳. مطمئن شوید گزینه **2-Step Verification** (تایید دو مرحله‌ای) حساب شما **روشن (ON)** است.
 
-### Step 3: Enter Outgoing Server Details (SMTP)
-Fill in the server details exactly as shown below:
+۴. در بالای صفحه اصلی Security، یک کادر جستجو (Search) وجود دارد. درون کادر جستجو، عبارت **App passwords** را تایپ کنید و روی نتیجه یافت شده کلیک کنید تا مستقیم به صفحه ساخت رمز عبور برنامه هدایت شوید.
 
-* **SMTP Server:** `smtp.gmail.com`
+۵. یک نام دلخواه برای برنامه انتخاب کنید (مثلاً: `Custom Domain SMTP`).
+
+۶. روی دکمه **Create** کلیک کنید. **رمز عبور ۱۶ حرفی** زرد رنگ نمایش داده شده را کپی کرده و در جایی ذخیره کنید (فاصله‌های بین حروف را نادیده بگیرید).
+
+### گام ۲: اتصال دامنه به پنل جیمیل
+
+۱. وارد جیمیل شخصی خود شوید.
+
+۲. روی آیکون چرخ‌دنده (تنظیمات) در بالا سمت راست کلیک کرده و **See all settings** را انتخاب کنید.
+
+۳. به تب **Accounts and Import** بروید.
+
+۴. در بخش **Send mail as** روی گزینه **Add another email address** کلیک کنید.
+
+۵. یک پنجره پاپ‌آپ زرد رنگ باز می‌شود، اطلاعات را به شکل زیر وارد کنید:
+
+<div align="left" dir="ltr">
+
+   * **Name:** نام تجاری یا نام شخصی خودتان (مثلاً: `John Doe`).
+   * **Email address:** آدرس ایمیل کاری دامنه‌تان (مثلاً: `info@yourdomain.com`).
+   * ⚠️ **خیلی مهم:** تیک گزینه **Treat as an alias** را حتماً **بردارید**.
+   * روی دکمه **Next Step** کلیک کنید.
+
+</div>
+
+### گام ۳: وارد کردن مشخصات سرور خروجی (SMTP)
+اطلاعات سرور را دقیقاً بر اساس ساختار زیر پر کنید:
+
+<div align="left" dir="ltr">
+
+* **SMTP Server:** `smtp.gmail.com` 
 * **Port:** `587`
-* **Username:** Your full personal Gmail address (`youraccount@gmail.com`)
-* **Password:** The **16-character App Password** you generated in Step 1.
-* **Connection Type:** Select **Secured connection using TLS (recommended)**.
+* **Username:** آدرس کامل جیمیل شخصی شما (`youraccount@gmail.com`)
+* **Password:** همان **رمز عبور ۱۶ حرفی اختصاصی** که در گام اول از گوگل دریافت کردید.
+* **نوع اتصال:** گزینه **Secured connection using TLS (recommended)** را انتخاب کنید.
 
-Finally, click the **Add Account** button.
+</div>
 
-### Step 4: Final Verification & Activation
+در نهایت روی دکمه **Add Account** کلیک کنید.
 
-1. Google will send a verification code to your custom domain email address to verify ownership.
-2. Since incoming forwarding (Part 1) is already active, this email will automatically land in your personal Gmail inbox.
-3. Open the email, copy the verification code, paste it into the yellow pop-up window, and click **Verify**.
+### گام ۴: تایید نهایی و فعال‌سازی
+
+۱. گوگل یک کد تایید برای بررسی مالکیت دامنه به ایمیل کاری شما ارسال می‌کند.
+
+۲. چون بخش دریافت (بخش اول) را قبلاً فعال کرده‌اید، این کد خودبه‌خود به جیمیل شخصی شما فوروارد می‌شود.
+
+۳. ایمیل را باز کنید، کد عددی را کپی کرده، در پنجره زرد رنگ وارد کنید و روی **Verify** کلیک کنید.
 
 ---
 
-## 🚀 Usage and Testing
-Now, whenever you click **Compose** in Gmail, you will find a drop-down menu in the **From** field. You can easily choose whether to send your email from your personal Gmail address or using your professional custom domain identity.
+## 🚀 نحوه استفاده و تست سیستم
+اکنون وقتی در جیمیل روی دکمه **Compose** (نگارش ایمیل جدید) کلیک می‌کنید، در کادر **From** (فرستنده) یک منوی کشویی اضافه شده است. شما می‌توانید به سادگی انتخاب کنید که ایمیلتان از طریق جیمیل شخصی ارسال شود یا با هویت و نام دامنه اختصاصی کاری‌تان.
