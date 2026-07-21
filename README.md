@@ -95,21 +95,21 @@
 ### گام ۳: وارد کردن مشخصات سرور خروجی (SMTP)
 اطلاعات سرور را دقیقاً بر اساس ساختار زیر پر کنید:
 
-<div align="right" dir="rtl">
+<div align="right" dir="ltr">
 
-* **SMTP Server:** `smtp.gmail.com`
+۱- **SMTP Server:** `smtp.gmail.com`
   
-* **Port:** `587`
+۲- **Port:** `587`
   
-* **Username:** آدرس کامل جیمیل شخصی شما (`youraccount@gmail.com`)
+۳- **Username:** آدرس کامل جیمیل شخصی شما (`youraccount@gmail.com`)
   
-* **Password:** همان **رمز عبور ۱۶ حرفی اختصاصی** که در گام اول از گوگل دریافت کردید.
+۴- **Password:** همان **رمز عبور ۱۶ حرفی اختصاصی** که در گام اول از گوگل دریافت کردید.
 
 </div>
 
-* **نوع اتصال:** گزینه **Secured connection using TLS (recommended)** را انتخاب کنید.
+  ۵- **نوع اتصال:** گزینه **Secured connection using TLS (recommended)** را انتخاب کنید.
 
-* در نهایت روی دکمه **Add Account** کلیک کنید.
+  ۶- در نهایت روی دکمه **Add Account** کلیک کنید.
 
 ### گام ۴: تایید نهایی و فعال‌سازی
 
